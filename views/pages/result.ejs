@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Calculation Result</title>
+	<title>Postal Calculation Result</title>
+	<meta http-equiv="pragma" content="no-cache" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/week09.css" />
 </head>
 <body>
-	<h1>Calculation Result</h1>
-	<p><%= value1 %> <%= mathSymbol %> <%= value2 %> = <%= result %></p>
+	<h1>Postal Calculation Result</h1>
+	<p>Selected Mail Type: <%= mailType %><br/>
+	Weight: <%= weight %> oz.<br/>
+	Postage Rate: <%= result %>
+	</p>
+	<a href="CalculatePostage.html" class="btn btn-primary">Calculate Again<a>
 </body>
 </html>

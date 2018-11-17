@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Postage Rate Calculator</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/week09.css" />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Postal Rate Calculator</h1>
+        <form action="/calc" method="get">
+            <div class="row-fluid">
+                <div class="form-group">
+                    <label for="mailType">Mail Type:</label>
+                    <select class="form-control input-edit" name="mailType" required>
+                        <option value="stamped">Letters (Stamped)</option>
+                        <option value="metered">Letters (Metered)</option>
+                        <option value="flats">Large Envelopes (Flats)</option>
+                        <option value="retail">First-Class Package Service—Retail</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="form-group">
+                    <label for="weight">Weight <span class="muted">(in oz.)</span>:</label>
+                    <input type="number" min="0" max="13" step="0.01" name="weight" class="form-control input-edit" value="" placeholder="Enter Package Weight" required />
+                </div>
+            </div>
+            <div class="row-fluid div-button">
+                <input type="submit" class="btn btn-primary pull-right" value="Get Result">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
